@@ -29,13 +29,13 @@ public class Cliente extends Thread{
         try {
             // Aqui el cliente intenta adquirir permiso para probar un vehículo y avisa con el Sout que lo está probando
             vehiculosDisponibles.acquire();
-            System.out.println("Don " + nombre + " está probando un vehículo");
+            System.out.println("+Don " + nombre + " está probando un vehículo");
             
             // Con el random simulamos el tiempo que lo esta probando
             sleep((long) (Math.random() * 4321 + 1000));
 
             // En este otro Sout el cliente avisa de cuando termina de probar el vehículo
-            System.out.println("Ya terminó Don " + nombre + " de probar el vehículo");
+            System.out.println("--Ya terminó Don " + nombre + " de probar el vehículo");
 
         } catch (InterruptedException e) {
             e.printStackTrace();
